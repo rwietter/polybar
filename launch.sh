@@ -16,6 +16,7 @@ while pgrep -x polybar > /dev/null; do sleep 1; done
 # Launch polybar
 # polybar top -c $(dirname $0)/top.ini &
 polybar top -c $(dirname $0)/top.ini &
+polybar bottom -c $(dirname $0)/bottom.ini &
 
 arch_updates & echo $! > ~/.config/polybar/scripts/arch/arch_updates.pid
 notify-send "Launched the main bar ..."
